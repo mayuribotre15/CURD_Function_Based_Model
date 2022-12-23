@@ -1,0 +1,38 @@
+{% extends 'index.html'%}
+
+{% block baseblock %}
+ <div  class="container w-75 p-3" align="center">
+     <h2 class="text-primary">Student Details</h2>
+     <table class="table table-hover">
+         <thead class="table-info">
+            <th align="center">ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>MObile No.</th>
+            <th></th>
+         </thead>
+         {% for s in stud %}
+         <tr class="table-warning">
+             <td>{{s.id}}</td>
+             <td>{{s.f_name}}</td>
+             <td>{{s.l_name}}</td>
+             <td>{{s.email}}</td>
+             <td>{{s.mobile_no}}</td>
+             <td>
+                 <div class="row">
+                    <div class="col-sm">
+                      <a href="/update/{{s.id}}" class="btn btn-info">Update</a>
+                    </div>
+                    <div class="col-sm">
+                      <a href="/delete/{{s.id}}" class="btn btn-danger">Delete</a>
+                    </div>
+                 </div>
+             </td>
+         </tr>
+         {% endfor %}
+     </table>
+
+     <a href="/insert" class="btn btn-primary">Enroll New Student</a>
+ </div>
+{% endblock %}

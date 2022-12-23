@@ -1,0 +1,1 @@
+web: gunicorn CURD_Function_Based_View.wsgi --log-file -

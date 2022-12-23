@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block baseblock%}
+<div class="container">
+    <h2 class="text-primary w-75 p-3">Enroll New Student</h2>
+    <form method="post">
+        {%csrf_token%}
+        <div class="form-group row">
+            {{form.as_p}}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Insert</button>
+    </form>
+</div>
+
+{% endblock %}
