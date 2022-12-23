@@ -84,6 +84,7 @@ DATABASES = {
         'NAME': 'CURD_Project',
         'USER': 'root',
         "PASSWORD": 'Mayuri@94',
+        "HOST": '/var/run/mysql'
     }
 }
 
